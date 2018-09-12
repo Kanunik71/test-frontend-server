@@ -12,23 +12,27 @@ export default new Router({
     routes: [
         {
             path: '/',
+            redirect: { name: 'user-list' }
+        },
+        {
+            path: '/users',
             name: 'user-list',
             component: UserListComponent
         },
         {
-            path: '/user/:id/edit',
+            path: '/users/edit/:id',
             name: 'user-edit',
             component: UserEditComponent,
             props: true
         },
         {
-            path: '/user/:id/delete',
+            path: '/users/delete/:id',
             name: 'user-delete',
             component: UserDeleteComponent,
             props: true
         },
         {
-            path: '/user-add',
+            path: '/users/create',
             name: 'user-add',
             component: UserAddComponent
         }
